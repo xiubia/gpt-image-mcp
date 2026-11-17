@@ -1,0 +1,15 @@
+{
+  "name": "gpt-image-mcp",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP server for GPT image generation and editing with selectable models through image.mlgb7.com.",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test ./test/*.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^3.23.0"
+  }
+}

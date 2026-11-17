@@ -1,0 +1,5 @@
+interface:
+  display_name: "GPT Image"
+  short_description: "Generate and edit with selectable GPT image models"
+  brand_color: "#111827"
+  default_prompt: "Use $gpt-image to generate or edit an image through the configured GPT Image MCP, using the model I request."

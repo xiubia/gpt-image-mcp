@@ -1,0 +1,35 @@
+{
+  "skill_name": "gpt-image",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "生成一张极简风格的黑白产品海报，主体是一只银色耳机，留白充足，输出一张图。",
+      "expected_output": "Uses gpt-image MCP text-to-image generation with n=1 and the configured default model, downloads the result automatically, and shows the returned absolute local_path without using another image tool.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "把 C:\\images\\reference.png 改成未来城市夜景，保留主体构图。",
+      "expected_output": "Uses gpt-image MCP image editing with the local path and requested edit prompt, downloads the result automatically, and shows the returned absolute local_path.",
+      "files": ["C:\\images\\reference.png"]
+    },
+    {
+      "id": 3,
+      "prompt": "生图服务如果暂时不可用怎么办？请不要改用内置生图 API。",
+      "expected_output": "Does not fall back to another image tool; reports the configured MCP/API failure clearly.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "用 gpt-image-2.5 生成一张象牙白背景的小型玉绿色陶瓷机器人。",
+      "expected_output": "Calls gpt_image_generate with model=gpt-image-2.5; if pending, polls the returned task ID without resubmitting; shows a completed local image or reports the actual provider error.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "这次请指定 gpt-image-2.5-flare 生成一张极简咖啡杯照片。",
+      "expected_output": "Calls the same generic gpt_image_generate tool with model=gpt-image-2.5-flare, preserving the explicit choice rather than replacing it with the default gpt-image-2.5 model.",
+      "files": []
+    }
+  ]
+}
